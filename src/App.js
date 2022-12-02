@@ -5,13 +5,14 @@ import {useDispatch, useSelector} from "react-redux";
 import Items from "./components/Items";
 import Header from "./components/Header";
 import {clearTasks} from "./store/actions";
+import cls from './App.module.css';
 
 function App() {
     const dispatch = useDispatch();
     const tasks = useSelector(state => state);
 
     return (
-        <Container>
+        <div className={cls.App}>
            <Header/>
             <Row>
                 <Col>
@@ -21,10 +22,11 @@ function App() {
             <Row>
                 <Col>
                     <Items tasks={ tasks } />
-                    <span onClick={() => dispatch(clearTasks()) }>Очистить</span>
-                </Col>
+                    </Col>
             </Row>
-        </Container>
+            <span className={cls.clear} onClick={() => dispatch(clearTasks()) }>Очистить</span>
+
+        </div>
     );
 }
 

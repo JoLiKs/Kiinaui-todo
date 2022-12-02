@@ -21,7 +21,7 @@ function Form() {
     }
     return (
         <form>
-            <input ref={inpRef} placeholder="Добавить новый элемент" onChange={e => handleTaskTitleChange(e)}/>
+            <input  ref={inpRef} placeholder="Добавить новый элемент" onChange={e => handleTaskTitleChange(e)} className={cls.inp}/>
             <input onClick={handleTaskSubmit} className={cls.addBtn} type="button" value="Добавить"/>
         </form>
     );

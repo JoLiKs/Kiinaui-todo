@@ -44,7 +44,7 @@
 }
 .completed {
     color: #90948c;
-    font-kerning: normal;
+    text-decoration: line-through;
 }
 .label__checkbox:checked + .label__text .label__check {
     -webkit-animation: check 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
