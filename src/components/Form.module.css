@@ -1,3 +1,17 @@
 .addBtn {
-    background: aqua;
+    background: #2431a7;
+    width: 80px;
+    height: 35px;
+    color: white;
+    border-radius: 3px;
+    border-width: 0px;
+}
+.addBtn:hover {
+    background: #222b8d;
+}
+.inp {
+    height: 35px;
+    border-color: gray;
+    border-radius: 3px;
+    border-width: 1px;
 }
