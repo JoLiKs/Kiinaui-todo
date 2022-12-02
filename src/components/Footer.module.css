@@ -5,3 +5,8 @@
 .footer {
     color: gray;
 }
+.line {
+    height: 0.5px;
+    background: lightgray;
+    width: 100%;
+}

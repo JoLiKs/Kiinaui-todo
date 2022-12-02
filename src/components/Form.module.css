@@ -9,9 +9,19 @@
 .addBtn:hover {
     background: #222b8d;
 }
-.inp {
-    height: 35px;
-    border-color: gray;
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 350px;
     border-radius: 3px;
-    border-width: 1px;
+    border: 1px solid #90948c;
+}
+.form input[type="text"] {
+    border-width: 0px;
+    width: 250px;
+}
+.form input[type="text"]:focus {
+    outline: none;
 }

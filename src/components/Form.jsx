@@ -20,10 +20,10 @@ function Form() {
         setTaskTitle('');
     }
     return (
-        <form>
-            <input  ref={inpRef} placeholder="Добавить новый элемент" onChange={e => handleTaskTitleChange(e)} className={cls.inp}/>
+        <div className={cls.form}>
+            <input type="text" ref={inpRef} placeholder="Добавить новый элемент" onChange={e => handleTaskTitleChange(e)}/>
             <input onClick={handleTaskSubmit} className={cls.addBtn} type="button" value="Добавить"/>
-        </form>
+        </div>
     );
 }
 export default Form;

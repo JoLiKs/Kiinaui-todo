@@ -13,6 +13,7 @@ function Footer(tasks) {
         all = tasks.tasks.length }
     return(
         <div className={cls.footer}>
+            <div className={cls.line}></div>
             {all > 0 ? <span>{completed}/{all} дело завершено</span> : <span>дело завершено</span>}
             <span className={cls.clear} onClick={() => dispatch(clearTasks())}>Очистить</span>
         </div>
