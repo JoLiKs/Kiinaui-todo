@@ -5,7 +5,7 @@ import Task from './Task.jsx';
 
 const Items = ({ tasks }) => {
 
-    if (tasks.length)
+    if (tasks)
         return (
             <ListGroup>
                 {

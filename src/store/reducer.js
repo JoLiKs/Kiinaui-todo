@@ -8,14 +8,14 @@ export default function reducer(state = [], action) {
                 title: action.payload.title,
                 completed: false,
             }];
-        case "DISABLE":
+        case "TOGGLE":
             return state.map(task => {
                 if (task.id === action.payload.id)
                     return { ...task, completed: !task.completed }
                 return task;
             });
-        case "ENABLE":
-            return state.filter(task => action.payload.id !== task.id);
+        case "CLEAR":
+            return state.forEach(i => state.unshift());
         default:
             return state;
     }

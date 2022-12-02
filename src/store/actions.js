@@ -2,11 +2,10 @@ export const addTask = task => ({
     type: "ADD",
     payload: task
 });
-export const enableTask = id => ({
-    type: "ENABLE",
-    payload: { id }
+export const clearTasks = () => ({
+    type: "CLEAR"
 });
 export const disableTask = id => ({
-    type: "DISABLE",
+    type: "TOGGLE",
     payload: { id }
 })
