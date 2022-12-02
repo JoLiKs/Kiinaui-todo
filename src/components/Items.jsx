@@ -1,4 +1,4 @@
-import cls from "./Items.module.css";
+import cls from './Items.module.css';
 
 function Items() {
     return (

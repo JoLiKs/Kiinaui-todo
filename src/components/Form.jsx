@@ -1,4 +1,4 @@
-import cls from "./Form.module.css";
+import cls from './Form.module.css';
 
 function Form() {
     return (
