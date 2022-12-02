@@ -6,9 +6,9 @@ import Items from "./components/Items";
 import Header from "./components/Header";
 import {clearTasks} from "./store/actions";
 import cls from './App.module.css';
+import Footer from "./components/Footer";
 
 function App() {
-    const dispatch = useDispatch();
     const tasks = useSelector(state => state);
 
     return (
@@ -19,13 +19,14 @@ function App() {
                     <Form/>
                 </Col>
             </Row>
+            <div className={cls.items} >
             <Row>
                 <Col>
                     <Items tasks={ tasks } />
                     </Col>
             </Row>
-            <span className={cls.clear} onClick={() => dispatch(clearTasks()) }>Очистить</span>
-
+            </div>
+            <Footer/>
         </div>
     );
 }

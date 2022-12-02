@@ -4,8 +4,6 @@
   align-items: center;
   justify-content: center;
 }
-.clear {
-  margin-top: 250px;
-  margin-left: 180px;
-  color: gray;
+.items {
+  margin-right: 140px;
 }
