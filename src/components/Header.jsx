@@ -1,7 +1,7 @@
 function Header() {
     return (
         <header>
-            Header
+            <h2>Дневной список дел</h2>
         </header>
     );
 }

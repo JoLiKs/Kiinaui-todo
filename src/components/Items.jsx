@@ -1,10 +1,21 @@
 import cls from './Items.module.css';
+import React from 'react';
+import { ListGroup } from "react-bootstrap";
+import Task from './Task.jsx';
 
-function Items() {
-    return (
-        <div>
-            Item
-        </div>
-    );
+const Items = ({ tasks }) => {
+
+    if (tasks.length)
+        return (
+            <ListGroup>
+                {
+                    tasks.map(task =>
+                        <Task key={task.id} task={task} />
+                    )
+                }
+            </ListGroup>
+        )
+    else return null;
 }
+
 export default Items;

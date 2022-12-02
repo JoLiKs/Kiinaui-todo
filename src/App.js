@@ -1,18 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from "./components/Header";
+import React from 'react';
+import {Container, Col, Row} from "react-bootstrap";
+import Form from './components/Form'
+import { useSelector } from "react-redux";
 import Items from "./components/Items";
-import Form from "./components/Form";
-
+import Header from "./components/Header";
 
 function App() {
-  return (
-    <div className="App">
-     <Header/>
-      <Items/>
-      <Form/>
-    </div>
-  );
+
+    const tasks = useSelector(state => state);
+
+    return (
+        <Container>
+           <Header/>
+            <Row>
+                <Col>
+                    <Form/>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <Items tasks={ tasks } />
+                </Col>
+            </Row>
+        </Container>
+    );
 }
 
 export default App;
