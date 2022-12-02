@@ -26,7 +26,7 @@ function App() {
                     </Col>
             </Row>
             </div>
-            <Footer/>
+            <Footer  tasks={ tasks } />
         </div>
     );
 }
