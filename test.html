@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(() => {
+    $("#ajax").click(() => {
+    $.post("/", (data, status) => {
+    alert("Status: " + data);
+    });
+    });
+    });
+</script>
+</head>
+<body class="d-flex h-100 text-center text-white bg-dark">
+<style>
+.test {
+position: relative;
+left: 592px;
+width: 120px;
+height: 100px;
+background: rgb(35, 135, 180);
+border-radius: 15px;
+display: table-cell;
+vertical-align: middle;
+font: 16pt bold;
+}
+</style>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <main class="px-3">
+        <h1>Главная страница</h1>
+        <div class="test" align="center">Anonj</div>
+        <input type="button" class="btn btn-primary ml-3" id="ajax" value="Connect bot">
+    </main>
+</div>
+
+
+
+
+
+</body>
+</html>
